@@ -1,0 +1,32 @@
+<Homescreen>
+    name:'home'
+    FloatLayout:
+        MDLabel:
+            text:"სატესტო გვერდი"
+            #adaptive_height:True
+            pos_hint:{'x':.45,'y':.45}
+            font_name:'DejaVuSans.ttf'
+        MDRectangleFlatIconButton:
+            font_name:'DejaVuSans.ttf'
+            icon:'security'
+            md_bg_color: "#445594"
+            text_color:"##f7f0ed"
+            markup:True
+            font_name:'DejaVuSans.ttf'
+            text:'[b][size=20]ადმინის დამატება   [/b]'
+            pos_hint:{'x':.08,'y':.75}
+            on_release:app.login()
+
+<Fistscreen>
+    name:'first'
+    FloatLayout:
+        MDTopAppBar:
+            title: "B S U"
+            font_name:'DejaVuSans.ttf'
+            left_action_items: [["keyboard-backspace", lambda x: app.GoToHome()]]
+        MDLabel:
+            id:name
+            text:"მეორე გვერდი"
+            #adaptive_height:True
+            pos_hint:{'x':.45,'y':.45}
+            font_name:'DejaVuSans.ttf'
